@@ -50,8 +50,20 @@ def fetch_page(url: str) -> str:
 
 
 def extract_stats(html: str) -> dict:
+    # Strip HTML tags first -- the number and its label often sit in
+    # separate elements (e.g. <div>24</div><div>human cases</div>), so
+    # leaving tags in place breaks a simple "(\d+)\s*human cases" match.
+    # Replace tags with a single space so we don't accidentally glue
+    # adjacent words together.
+    no_tags = re.sub(r"<[^>]+>", " ", html)
+    # Decode the handful of HTML entities likely to appear in this content.
+    no_tags = (no_tags
+               .replace("&nbsp;", " ")
+               .replace("&amp;", "&")
+               .replace("&#39;", "'")
+               .replace("&quot;", '"'))
     # Collapse whitespace/newlines so patterns match across line breaks.
-    flat = re.sub(r"\s+", " ", html)
+    flat = re.sub(r"\s+", " ", no_tags)
 
     stats = {}
     for key, pattern in PATTERNS.items():
