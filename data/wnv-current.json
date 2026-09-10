@@ -1,0 +1,15 @@
+{
+  "human_cases": null,
+  "human_deaths": null,
+  "median_age": null,
+  "youngest_case_age": null,
+  "oldest_case_age": null,
+  "counties_positive": null,
+  "positive_birds": null,
+  "positive_batches": null,
+  "positive_horses": null,
+  "idph_last_updated": "9/9/2026",
+  "year": 2026,
+  "source_url": "https://idph.illinois.gov/wnvpublic/wnvglance.aspx?year=2026",
+  "fetched_at": "2026-09-10T02:34:26+00:00"
+}
