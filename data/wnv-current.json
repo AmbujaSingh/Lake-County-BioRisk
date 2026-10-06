@@ -4,12 +4,12 @@
   "median_age": 67,
   "youngest_case_age": null,
   "oldest_case_age": null,
-  "counties_positive": 59,
+  "counties_positive": 60,
   "positive_birds": null,
   "positive_batches": null,
   "positive_horses": null,
   "idph_last_updated": "9/30/2026",
   "year": 2026,
   "source_url": "https://idph.illinois.gov/wnvpublic/wnvglance.aspx?year=2026",
-  "fetched_at": "2026-10-05T20:53:14+00:00"
+  "fetched_at": "2026-10-06T18:42:13+00:00"
 }
